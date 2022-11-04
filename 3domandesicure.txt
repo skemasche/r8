@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<string.h>
+#define MAXLEN 20
+#define MAX 4
+#define MIN 0
+int main(){
+	int a,b,g,c,d,r1,r2,r3;
+	char f;
+	char h[22];
+	r1,r2,r3=1;
+	printf("presentazione");
+	printf("scegliere: \n 1)se si vuole iniziare una nuova partita \n 0) se si vuole terminare \n ");
+	scanf("%d",&g);
+	while(g==1){
+		printf("inserire nome giocatore: \n"); /*input nome*/
+		scanf("%s",&h);
+		if(strlen(h)>MAXLEN){ /*controllo lunghezza array*/
+			printf("FATAL ERROR");
+			break;};
+		printf("Qual e' la capitale della svizzera? \n 1)Berna \n 2)Lugano \n 3)Milano \n");
+		    scanf ("%d",&r1);
+		    if(r1==1){
+		    	printf("risposta esatta\n");
+		    	a++;}
+		    	else if(r1>MIN&&r1<MAX){ /*controllo range di r1*/
+		    		printf("risposta errata \n");
+				}
+				else{
+					printf("FATAL ERROR");
+		    		break;
+				};
+		printf("A quanti gradi bolle l'acqua? \n 1)99 gradi celsius \n 2)100 gradi celsius \n 3)2000 gradi celsius \n");
+			scanf ("%d",&r2);
+            if(r2==2){
+		    	printf("risposta esatta \n");
+		    	a++;}
+		    	else if(r2>MIN&&r2<MAX){ /*controllo range di r2*/
+		    		printf("risposta errata \n");
+				}		    	
+				else{
+					printf("FATAL ERROR");
+		    		break;
+				};
+		printf("quanto pesa Gerry Scotti? \n 1)2 etti da bagnato \n 2)88 g/mol \n 3)na valanga \n");
+		    scanf ("%d",&r3);
+            if(r3==3){
+		    	printf("risposta esatta\n");
+		    	a++;}
+		    	else if(r3>MIN&&r3<MAX){ /*controllo range di r3*/
+		    		printf("risposta errata \n");
+				}		    	
+				else{
+					printf("FATAL ERROR");
+		    		break;
+				};
+		printf("Game over \n il tuo punteggio e': %d \n",a);
+		a=0;
+		printf("scegliere: \n 1)se si vuole iniziare una nuova partita \n 0) se si vuole terminare \n ");
+	scanf("%d",&g);
+	}
+return 0;
+}
